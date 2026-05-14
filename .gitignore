@@ -3,3 +3,4 @@ logs/
 plugins/
 datalake/**/*.csv
 datalake/**/*.parquet
+.venv/
