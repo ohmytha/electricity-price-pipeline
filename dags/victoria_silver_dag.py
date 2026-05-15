@@ -36,6 +36,7 @@ def victoria_silver_dag():
     trigger_gold = TriggerDagRunOperator(
         task_id='trigger_victoria_gold_dag',
         trigger_dag_id='victoria_gold_dag',
+        conf={"silver_path": "{{ task_instance.xcom_pull(task_ids='run_clean_to_silver') }}"},
         execution_date='{{ execution_date }}'
     )
 
