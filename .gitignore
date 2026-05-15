@@ -4,3 +4,4 @@ plugins/
 datalake/**/*.csv
 datalake/**/*.parquet
 .venv/
+.env
