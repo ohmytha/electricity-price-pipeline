@@ -9,16 +9,15 @@ default_args = {
 
 @dag(
     default_args=default_args,
-    schedule_interval='@weekly',
-    start_date=datetime(2026, 1, 1),
+    schedule_interval=None,
+    start_date=datetime(2015, 1, 1),
     catchup=False
 )
 def victoria_bronze_dag():
 
     @task
-    def run_extract_to_bronze(**kwargs):
-        ds = kwargs.get('ds')
-        return extract_to_bronze(ds)
+    def run_extract_to_bronze():
+        return extract_to_bronze()
 
     trigger_silver = TriggerDagRunOperator(
         task_id='trigger_victoria_silver_dag',
