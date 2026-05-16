@@ -104,7 +104,7 @@ The dataset is retrieved using the `download_data.py` utility script, which down
 
 ## Workflow Diagram
 
-![Pipeline Diagram](img/de241-project.draw.io.png)
+![Pipeline Diagram](img/de241-project.png)
 
 ## Project Setup
 
